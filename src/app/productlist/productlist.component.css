@@ -1,0 +1,18 @@
+#price
+{
+    color: orange;
+}
+#discountprice
+{
+    color: green;
+}
+.cart
+{
+    border: 1px solid;
+}
+.cart-but
+{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+}

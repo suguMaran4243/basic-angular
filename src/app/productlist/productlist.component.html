@@ -1,0 +1,21 @@
+<div class="cart">
+    <input type="search" [(ngModel)]="searchText" ><button class="btn btn-dark">Search</button>
+    <p *ngIf="searchText!=''">Search item:{{searchText}}</p>
+    <img [src]="product.iphoneImage" alt="">
+   
+<p>Name:{{product.name}}</p>
+<p>Price :${{product.price}}</p>
+<p id="price">Color:{{product.color}}</p>
+<p >Discount:${{product.discount}}</p>
+<p id="discountprice">Discount Price:${{product.price-product.discount}}</p>
+<p >Stock {{ product.instock>0?'Only '+product.instock+'is left':product.instock+'left'}}</p>
+<button class="btn btn-success" [disabled]="!(product.instock>0)">Buy now</button>
+<input type="text"  (input)="onNameChange($event)">
+<p>Name:{{name}}</p>
+<button class="cart-but" (click)="decrementValue()">-</button>
+<span>{{product.addToCart}}</span>
+<button class="cart-but"(click)="incrementValue()">+</button>
+</div>
+<div *ngFor="let item of listofString">
+    <p>Username :{{item}}</p>
+</div>
